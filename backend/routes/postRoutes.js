@@ -1,0 +1,65 @@
+const postController = require("../controllers/postController");
+const authMiddleware = require("../middleware/authMiddleware");
+
+module.exports = function (app) {
+  app.post(
+    "/merny/api/v1/auth/addPost",
+    authMiddleware.verifyToken,
+    postController.createPost
+  );
+  app.get(
+    "/merny/api/v1/auth/getPost",
+    authMiddleware.verifyToken,
+    postController.getAllPosts
+  );
+  app.patch(
+    "/merny/api/v1/auth/updatePost/:id",
+    authMiddleware.verifyToken,
+    postController.updatePostById
+  );
+  app.get(
+    "/merny/api/v1/auth/getPost/:id",
+    authMiddleware.verifyToken,
+    postController.getPostById
+  );
+  app.delete(
+    "/merny/api/v1/auth/deletePost/:id",
+    authMiddleware.verifyToken,
+    postController.deletePostById
+  );
+  app.patch(
+    "/merny/api/v1/auth/likePost/:id",
+    authMiddleware.verifyToken,
+    postController.likePostById
+  );
+  app.patch(
+    "/merny/api/v1/auth/dislikePost/:id",
+    authMiddleware.verifyToken,
+    postController.unlikePostById
+  );
+  app.get(
+    "/merny/api/v1/auth/getUserPost/:id",
+    authMiddleware.verifyToken,
+    postController.findPostByUserId
+  );
+  app.patch(
+    "/merny/api/v1/auth/savePost/:id",
+    authMiddleware.verifyToken,
+    postController.savePost
+  );
+  app.patch(
+    "/merny/api/v1/auth/unsavePost/:id",
+    authMiddleware.verifyToken,
+    postController.unSavePost
+  );
+  app.get(
+    "/merny/api/v1/auth/getSavedPost",
+    authMiddleware.verifyToken,
+    postController.findSavedPosts
+  );
+  app.get(
+    "/merny/api/v1/auth/followingPosts",
+    authMiddleware.verifyToken,
+    postController.getFollowingPosts
+  );
+};

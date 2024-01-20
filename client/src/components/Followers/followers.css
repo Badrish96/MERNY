@@ -1,0 +1,87 @@
+/* CSS for the Following modal */
+.follower-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 999;
+  width: 350px;
+  height: 250px;
+}
+.followerCard_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.followerCard_heading h6 {
+  margin-left: 115px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+hr {
+  margin: 0;
+}
+
+.follower-content img {
+  width: 45px;
+  height: 45px;
+  margin-top: 5px;
+}
+
+.follower-content a {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Additional styles for close button */
+.follow_button {
+  padding: 3px 10px;
+  background-color: white;
+  color: #15a2b6;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 75px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.follow_button:hover {
+  background-color: #0f6773;
+  color: white;
+}
+
+.follower-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.followers_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unfollow_button {
+  width: 80px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: white;
+  color: #d32f2f;
+  border: 1px solid;
+  padding: 0;
+  font-size: 14px;
+}
+
+.unfollow_button:hover {
+  background-color: #d32f2f;
+  color: white;
+}

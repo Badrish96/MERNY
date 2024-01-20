@@ -1,0 +1,29 @@
+.Post {
+  display: flex;
+  align-items: center;
+  border: 2px solid #8080804d;
+  width: 98%;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.profilePic {
+  width: 70px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.status_input input {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #80808033;
+  width: 770px;
+  border: none;
+}
+
+.post_status {
+  display: flex;
+  justify-content: space-between;
+}

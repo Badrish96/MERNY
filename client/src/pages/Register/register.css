@@ -1,0 +1,69 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.registerForm {
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  margin: 10px 0px;
+  min-width: 400px;
+}
+
+.registerForm > input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  outline: none;
+}
+
+.input_fields {
+  margin-top: 10px;
+}
+
+.radio_buttons {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.radio_buttons div {
+  display: flex;
+  align-items: center;
+}
+
+.radio_buttons p {
+  margin-right: 2px;
+  font-size: 14px;
+}
+
+.radio_buttons input {
+  margin-bottom: 14px;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  background-color: gray;
+  color: white;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: black;
+}

@@ -1,0 +1,48 @@
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.loginForm {
+  background-color: white;
+  padding: 30px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.loginForm > input {
+  box-sizing: border-box;
+  padding: 1vmax 2vmax;
+  width: 350px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 15px 5px;
+  outline: none;
+}
+.loginForm > a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.342);
+  margin: 1vmax;
+}
+
+button {
+  cursor: pointer;
+  width: 350px;
+  padding: 12px;
+  background-color: gray;
+  color: white;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: black;
+}

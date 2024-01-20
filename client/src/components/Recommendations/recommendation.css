@@ -1,0 +1,101 @@
+.followerImg {
+  width: 50px;
+  height: 30px;
+}
+
+.followers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.followers_content {
+  display: flex;
+  align-items: center;
+}
+
+.follower_heading {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.follower_heading h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2190ea;
+  cursor: pointer;
+}
+
+.follow_button {
+  width: 80px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: white;
+  color: #599292;
+  border: 1px solid;
+  padding: 0;
+}
+
+.recommendation_unfollow_button {
+  width: 75px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: white;
+  color: #d32f2f;
+  border: 1px solid;
+  padding: 0;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.recommendation_unfollow_button:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.follow_button:hover {
+  background-color: #599292; /* New background color on hover */
+  color: white; /* Change text color on hover */
+}
+.user {
+  display: flex;
+  margin-top: 20px;
+}
+
+.username p {
+  margin: 0;
+  font-size: 14px;
+  color: #078ce3;
+}
+
+.username h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #078ce3;
+  cursor: pointer;
+}
+
+.follower_profilePic {
+  width: 80px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 12px;
+  color: #078ce3;
+  cursor: pointer;
+}
+
+.name > div {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user_name {
+  text-decoration: none;
+}

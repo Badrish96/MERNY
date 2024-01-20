@@ -1,0 +1,50 @@
+const userController = require("../controllers/userController");
+const authMiddleware = require("../middleware/authMiddleware");
+
+module.exports = function (app) {
+  app.get(
+    "/merny/api/v1/auth/findUser",
+    authMiddleware.verifyToken,
+    userController.findAllUsers
+  );
+  app.get(
+    "/merny/api/v1/auth/findUser/:id",
+    authMiddleware.verifyToken,
+    userController.getUserById
+  );
+  app.patch(
+    "/merny/api/v1/auth/user",
+    authMiddleware.verifyToken,
+    userController.updateUserInfo
+  );
+  app.patch(
+    "/merny/api/v1/auth/followUser/:id",
+    authMiddleware.verifyToken,
+    userController.followUser
+  );
+  app.patch(
+    "/merny/api/v1/auth/unfollowUser/:id",
+    authMiddleware.verifyToken,
+    userController.unfollowUser
+  );
+  app.get(
+    "/merny/api/v1/auth/userSuggestions",
+    authMiddleware.verifyToken,
+    userController.userSuggestions
+  );
+  app.get(
+    "/merny/api/v1/auth/getFollowingUsers",
+    authMiddleware.verifyToken,
+    userController.getFollowingUsers
+  );
+  app.get(
+    "/merny/api/v1/auth/getFollowers",
+    authMiddleware.verifyToken,
+    userController.getFollowers
+  );
+  app.get(
+    "/merny/api/v1/auth/getUserIdByUsername/:username",
+    authMiddleware.verifyToken,
+    userController.getUserIdByUsername
+  );
+};

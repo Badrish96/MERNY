@@ -1,0 +1,70 @@
+.createPostModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 999;
+  width: 500px;
+  height: 490px;
+  border-radius: 10px;
+}
+
+.createPost textarea {
+  border: none;
+  margin-top: 23px;
+  width: 100%;
+  height: 35vh;
+}
+
+.select_emoji {
+  text-align: end;
+  cursor: pointer;
+}
+
+.createPost_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.post_button {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #6b767c;
+  color: white;
+  border: none;
+}
+
+.post_button:hover {
+  background-color: white;
+  color: #6b767c;
+  border: 1px solid #6b767c;
+}
+
+.capture_img {
+  background-color: gray;
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  width: 109px;
+  height: 51px;
+}
+.react-html5-camera-photo {
+  bottom: 125px;
+}
+
+.react-html5-camera-photo > video {
+  width: 350px !important;
+}
