@@ -25,10 +25,6 @@ exports.addComment = async (req, res) => {
       return res.status(404).json({ msg: "User not found." });
     }
 
-    if (user._id != postUserId) {
-      return res.status(400).send({ message: "User does not match" });
-    }
-
     // If it's not a reply, create a new comment
     if (!reply) {
       const newCommentData = {
