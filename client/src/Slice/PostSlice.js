@@ -16,7 +16,7 @@ const PostSlice = createSlice({
     },
     createPostSuccess(state, action) {
       state.loading = false;
-      state.posts.push(action.payload); // Assuming the new post is in the payload
+      state.posts.push(action.payload);
       state.error = null;
     },
     createPostFailure(state, action) {

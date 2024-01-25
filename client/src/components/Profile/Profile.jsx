@@ -20,6 +20,7 @@ export default function Profile() {
   const [followers, setFollowers] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [showUserPosts, setShowUserPosts] = useState(true);
+  const [showSavedPosts, setShowSavedPosts] = useState(false);
 
   useEffect(() => {
     // Retrieve the user information from local storage
@@ -63,7 +64,13 @@ export default function Profile() {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   const handlePostClick = () => {
-    setShowPost(true);
+    setShowUserPosts(true);
+    setShowSavedPosts(false);
+  };
+
+  const handleSavedClick = () => {
+    setShowSavedPosts(true);
+    setShowUserPosts(false);
   };
 
   const handleFollowingClick = () => {
@@ -93,10 +100,6 @@ export default function Profile() {
   const handleSaveProfile = () => {
     // Logic to save profile data goes here
     setShowEditProfile(false); // Close the edit profile modal after saving
-  };
-
-  const handleUserPostClick = () => {
-    setShowUserPosts(true);
   };
 
   return (
@@ -135,12 +138,12 @@ export default function Profile() {
         <hr className="line" />
         <div className="saved_post">
           <div>
-            <button onClick={handleUserPostClick}>Post</button>
+            <button onClick={handlePostClick}>Post</button>
           </div>
           <div>
             <button
               style={{ padding: "5px 15px", marginLeft: "10px" }}
-              onClick={() => setShowPost(true)}
+              onClick={handleSavedClick}
             >
               Saved
             </button>
@@ -182,7 +185,7 @@ export default function Profile() {
             <Followers followers={followers} onClose={handleFollowerClose} />
           </div>
         )}
-        {showPost && (
+        {showSavedPosts && (
           <div>
             <Saved />
           </div>

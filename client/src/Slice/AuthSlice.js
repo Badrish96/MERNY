@@ -23,7 +23,6 @@ const AuthSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    // New registration actions
     registerStart(state) {
       state.loading = true;
       state.error = null;
@@ -37,6 +36,12 @@ const AuthSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+    logout(state) {
+      // Clear user data when logging out
+      state.user = null;
+      state.loading = false;
+      state.error = null;
+    },
   },
 });
 
@@ -47,5 +52,6 @@ export const {
   registerStart,
   registerSuccess,
   registerFailure,
+  logout,
 } = AuthSlice.actions;
 export default AuthSlice.reducer;

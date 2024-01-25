@@ -25,6 +25,8 @@ import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 import { debounce } from "lodash";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { logout } from "../../Slice/AuthSlice";
+import { useDispatch } from "react-redux";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -68,8 +70,8 @@ export default function PrimarySearchAppBar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [userSuggestions, setUserSuggestions] = useState([]);
   const [notifications, setNotifications] = useState([]);
+  const dispatch = useDispatch();
 
-  // Modify delayedFetchUserSuggestions to use the functional form of set state
   const delayedFetchUserSuggestions = debounce(async () => {
     const authToken = window.localStorage.getItem("x-auth-token");
 
@@ -116,6 +118,9 @@ export default function PrimarySearchAppBar() {
     window.localStorage.removeItem("x-auth-token");
     window.localStorage.removeItem("loggedIn");
     window.localStorage.removeItem("user");
+
+    // Dispatch the logout action to clear user data from the state
+    dispatch(logout());
 
     // Navigate to the login page
     navigate("/");
